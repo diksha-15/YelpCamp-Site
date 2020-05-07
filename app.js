@@ -1,6 +1,6 @@
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 3000;
+//const http = require('http');
+//const hostname = '127.0.0.1';
+//const port = 3000;
 
 
 var express       = require("express"),
@@ -66,7 +66,7 @@ app.use(function(req , res , next){
 app.use("/campgrounds" , campgroundroute);
 app.use("/campgrounds/:id/comments/" , commentroute);
 app.use(Authroute);
-
-app.listen(process.env.PORT || port , hostname, function(){
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(process.env.PORT, process.env.IP, () => console.log("The YelpCamp Server Has Started!"));
+//app.listen(process.env.PORT || port , hostname, function(){
+ // console.log(`Server running at http://${hostname}:${port}/`);
+//});
