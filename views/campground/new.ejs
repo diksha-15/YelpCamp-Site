@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+
+<main class="container">
+      <form class="login-register" action="/campgrounds" method="POST">  
+        <div class="text-center mb-4">
+          <h1 class="h3 mb-3 font-weight-normal"><strong>Create New Campground</strong></h1>
+        </div>
+        <div class="card border-dark mb-3" style="width: 24rem;">
+          <div class="card-body">
+            <div class="form-group card-text">
+               <input id="name" class="form-control" type="text" name="name" placeholder="campground name" >
+              <label for="name">Name</label>
+            </div>
+           
+            <div class="form-group">
+              <input id="campground-price" class="form-control" name="price" type="number" placeholder="Price (USD per day)" min="0.00" step="0.01" required>
+              <label for="campground-price">Price (USD per day)</label>
+            </div>  
+             <div class="form-group">
+              <input id="campground-image" class="form-control" type="text" name="image" placeholder="Image Url" >
+              <label for="campground-image">Image</label>
+            </div>
+            <div class="form-group">
+              <input id="campground-desc" class="form-control"  type="text" name="description" placeholder="Description" required>
+              <label for="campground-desc">Description</label>
+            </div>
+            <button class="btn btn-outline-primary" type="submit">Submit</button>
+            <a href="/campgrounds"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Go Back</a>
+            </div>
+          </div>
+        </div>   
+      </form>
+    </main>
+<%- include("../partials/footer") %>
+
+
