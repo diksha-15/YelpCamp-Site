@@ -20,8 +20,7 @@ var express       = require("express"),
 var campgroundroute = require("./routes/campgrounds");
     commentroute        = require("./routes/comments");
     Authroute       = require("./routes/Auth");
-mongoose.connect(process.env.MONGODB_URI || 
-'mongodb+srv://Diksha_15:101703170@yelpcamp-dfgrv.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/yelp_camp",{
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
